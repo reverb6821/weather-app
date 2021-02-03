@@ -4,7 +4,8 @@
   "description": "a boilerplate from scratch for webpack with webpack, elint, prettier, airbnb, sass and loader",
   "main": "App.js",
   "scripts": {
-    "start": "webpack serve --hot --inline"
+    "start": "webpack serve --hot --inline",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
