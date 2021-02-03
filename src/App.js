@@ -5,7 +5,7 @@ import './App.scss';
 // ?API Key
 const apiKey = {
   url:'https://api.openweathermap.org/data/2.5/',
-  key:'0ce3b9901c30cb494d6e5e43c1a96ae8'
+  key:'/'
 }
 
 const App = () => {
