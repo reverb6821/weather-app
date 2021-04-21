@@ -7,9 +7,9 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "airbnb", 
-        "prettier"
+        "plugin:@typescript-eslint/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -19,15 +19,9 @@
     },
     "plugins": [
         "react",
-        "prettier"
+        "@typescript-eslint"
     ],
     "rules": {
-        "prettier/prettier":"error",
-        "no-unusued-vars":"warn",
-        "no-console":"off",
-        "func-names":"off",
-        "no-process-exit": "warn",
-        "object-shorthand": "off",
-        "class-methods-use-this":"off"
+
     }
 }
