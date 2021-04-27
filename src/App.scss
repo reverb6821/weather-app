@@ -19,11 +19,11 @@ body {
 	transition: 0.4 ease;
 }
 .app.cold {
-	background-image: url('./Asset/img/cold.jpg');
+	background-image: url('../public/media/img/cold.jpg');
 
 }
 .app.warm {
-	background-image: url('./Asset/img/warm.jpg');
+	background-image: url('../public/media/img/warm.jpg');
 }
 main {
 	min-height: 100vh;
