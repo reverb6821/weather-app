@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 import * as React from 'react'
 
@@ -6,6 +7,8 @@ import '@styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RootComponent />
+    <BrowserRouter>
+      <RootComponent />
+    </BrowserRouter>
   </React.StrictMode>,
 )

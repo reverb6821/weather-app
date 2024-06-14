@@ -1,27 +1,20 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom';
+import * as React from 'react'
+
+const NotFound = React.lazy(() => import('@pages/NotFound'))
+const Main = React.lazy(()=> import('@pages/Main'))
+const Home = React.lazy(()=> import('@routes/Home'))
 
 function RootComponent() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </div>
-      <div className="card">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/RootComponent.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <React.Fragment>
+      <Routes>
+        <Route element={<React.Suspense fallback={<div>Loading...</div>}><Main/></React.Suspense>}>
+          <Route path="/" element={<React.Suspense fallback={<div>Loading...</div>}><Home/></React.Suspense>} />
+          <Route path="*" element={<React.Suspense fallback={<div>Loading...</div>}><NotFound/></React.Suspense>} />
+        </Route>
+      </Routes>
+    </React.Fragment>
   )
 }
 
