@@ -48,6 +48,12 @@
       "@styles/*": [
         "src/assets/styles*"
       ],
+      "@query/*": [
+        "src/query*"
+      ],
+      "@api/*": [
+        "src/api*"
+      ],
       /* if need more folder, add here*/
     },
   },
