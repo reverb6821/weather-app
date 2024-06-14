@@ -6,14 +6,12 @@ function RootComponent() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-        </a>
-        <a href="https://react.dev" target="_blank">
-        </a>
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1>
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
