@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import * as React from 'react'
 
+
 const NotFound = React.lazy(() => import('@pages/NotFound'))
 const Main = React.lazy(()=> import('@pages/Main'))
 const Home = React.lazy(()=> import('@routes/Home'))

@@ -1,12 +1,18 @@
 import { Outlet } from 'react-router-dom'
 import * as React from 'react';
 
-const Main: React.FC = () => (
-  <React.Fragment>
-    <main>
-      <Outlet />
-    </main>
-  </React.Fragment>
-)
+import { useDarkModeStore } from '@store/darkModeStore';
+import DarkModeToggle from '@/components/ThemeSwitcher/DarkModeToggle';
+const Main: React.FC = () => {
+  const { isDarkMode } = useDarkModeStore();
+  
+  return(
+    <React.Fragment>
+      <main className={`${isDarkMode ? 'dark' : ''}`}>
+        <DarkModeToggle />
+        <Outlet />
+      </main>
+    </React.Fragment>
+  )}
 
 export default Main
